@@ -1,7 +1,7 @@
 import { create } from "apisauce"
 
 const api = create ({
-    baseURL:"http://localhost:4000"
+    baseURL:"https://case-lsx.herokuapp.com/"
 })
 
 api.addResponseTransform (response => {
