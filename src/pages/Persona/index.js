@@ -39,13 +39,12 @@ class Persona extends Component {
     
     componentDidMount () {
         console.log("Componente montado")
-        this.setState ({owner : this.props.match.params.ownerId})
+        this.setState ({owner:this.props.match.params.ownerId})
         console.log(this.props.match.params.ownerId) 
     }
 
     savePersona = async () => {
-        const {      
-        owner,
+        const {    owner,   
         name,
         sex,
         age,
@@ -59,6 +58,7 @@ class Persona extends Component {
         company_workers,
         company_role,
         image,} = this.state
+ 
 
         try{
 
@@ -77,7 +77,7 @@ class Persona extends Component {
                 company_role,
                 image,})
             console.log (response.data)
-            
+
             return this.props.history.push(`/showpersona/${response.data.persona._id}`)
 
 
@@ -120,7 +120,7 @@ class Persona extends Component {
     render() {
         return (
             <div className="maisum">
-            <div className="myContainerP">
+            <div className="myContainer">
               <h2 className="header">Gerador de Persona</h2>
               {this.renderForms()} 
  
