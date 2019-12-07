@@ -29,12 +29,10 @@ class FourthForm extends Component {
           <label htmlFor="exampleFormControlSelect1">Qual é a área de atuação da sua empresa?</label>
           <select className="form-control" id="exampleFormControlSelect1" name = "company_role" onChange = {this.props.handleChange}>
             <option></option>
-            <option>Software e Cloud</option>
-            <option>Agronegócio</option>
-            <option>Consultorias e Treinamentos</option>
-            <option>Ecommerce</option>
-            <option>Educação e Ensino</option>
-            <option>Imobiliárias</option>
+            <option>Turismo</option>
+            <option>Educação</option>
+            <option>Transporte</option>
+            <option>Gráfica</option>
           </select>
         </div> 
     

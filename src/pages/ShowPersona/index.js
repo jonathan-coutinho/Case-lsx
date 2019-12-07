@@ -49,20 +49,20 @@ class ShowPersona extends Component {
         return (
             <div className="myContainer">
               <h2 className="header">Essa é a sua Persona!</h2>
-              <img className ="myPersona" alt ="foto de Persona" 
+              <img className ="myPersona " alt ="foto de Persona" 
                 src = {image}>
               </img>
               <h2 className="myName">{name}</h2>
               <h3 className="myRole">{role}</h3>
 
-              <p className="h3 font-weight-normal"><strong>Empresa:</strong> {where_works}</p>
-              <p className="h3 font-weight-normal"><strong>Idade:</strong> {age}</p>
-              <p className="h3 font-weight-normal"><strong>Gênero:</strong> {sex}</p>
-              <p className="h3 font-weight-normal"><strong>Educação:</strong> {scolarship}</p>
-              <p className="h3 font-weight-normal"><strong>Mídias:</strong> {communication_means}</p>
-              <p className="h3 font-weight-normal"><strong>Objetivos:</strong> {dreams}</p>
-              <p className="h3 font-weight-normal"><strong>Desafios:</strong> {problems}</p>
-              <p className="h3 font-weight-normal"><strong>Como minha empresa pode ajudá-la:</strong> {company_help}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Empresa:</strong> {where_works}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Idade:</strong> {age}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Gênero:</strong> {sex}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Educação:</strong> {scolarship}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Mídias:</strong> {communication_means}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Objetivos:</strong> {dreams}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Desafios:</strong> {problems}</p>
+              <p className="h3 font-weight-normal text-center"><strong>Como minha empresa pode ajudá-la:</strong> {company_help}</p>
 
             </div>
           );

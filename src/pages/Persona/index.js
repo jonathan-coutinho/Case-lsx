@@ -39,7 +39,7 @@ class Persona extends Component {
     
     componentDidMount () {
         console.log("Componente montado")
-        this.setState ({owner:this.props.match.params.ownerId})
+        this.setState ({owner : this.props.match.params.ownerId})
         console.log(this.props.match.params.ownerId) 
     }
 
@@ -61,20 +61,8 @@ class Persona extends Component {
  
 
         try{
-
-            const response = await api.post ("/persona" , {owner,
-                name,
-                sex,
-                age,
-                role,
-                dreams,
-                problems,
-                where_works,
-                scolarship,
-                communication_means,
-                company_help,
-                company_workers,
-                company_role,
+            console.log(owner)
+            const response = await api.post ("/persona" , {owner,name,sex,age,role,dreams,problems,where_works,scolarship,communication_means,company_help,company_workers, company_role,
                 image,})
             console.log (response.data)
 
