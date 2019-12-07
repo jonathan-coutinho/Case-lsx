@@ -1,5 +1,7 @@
 .myForm {
     width: 100%;
+    background-color: #0c0d33;
+    padding-left: 50px;
 }
 .chamada {
     text-align: left;

@@ -1,0 +1,47 @@
+.header {
+    margin-top: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+.h3UserForm {
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+    margin: 30px;
+    padding: 10px;
+}
+.display-3 {
+    text-align: center;
+    font-weight: bold;
+}
+.img12 {
+ width: 550px;
+ height: 400px;
+ margin-bottom: 20px;
+ border-radius: 10px;
+}
+.testeForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+}
+.myForm {
+    width: 500px;
+    margin-top: 30px;
+}
+.jumbotronUser {
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+.myControlUser {
+    margin-top: 15px;
+    padding-top: 20px;
+    margin-left: 40px;
+}
+.mySpacingContainerUser{
+    display: flex;
+    justify-content: space-between;
+}
+.myUser {
+    background-color: #0c0d33;
+    color: white;
+}

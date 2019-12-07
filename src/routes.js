@@ -3,14 +3,17 @@ import {BrowserRouter,Switch,Route} from 'react-router-dom'
 
 import Home from "./pages/Home"
 import UserForm from "./pages/UserForm"
-
+import Persona from "./pages/Persona"
+import ShowPersona from "./pages/ShowPersona"
 
 const Routes = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path = "/home" component = {Home}></Route>
+                <Route path exact = "/" component = {Home}></Route>
                 <Route path = "/user" component = {UserForm}></Route>
+                <Route path = "/persona/:owneriD" component = {Persona}></Route>
+                <Route path = "/showpersona/:personaId" component = {ShowPersona}></Route>
             </Switch>
         </BrowserRouter>
     )

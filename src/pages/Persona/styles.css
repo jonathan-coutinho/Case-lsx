@@ -1,0 +1,29 @@
+.imagesBox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0 10px 0;
+    width: 80%;
+}
+.imagePersona {
+    width: 350px;
+    opacity: 0.85;
+}
+.imgBackground {
+    margin: 5px;
+}
+.imgBackgroundBlue {
+    background-color: blue;
+    margin: 5px;
+}
+.maisum {
+    background-color: #0c0d33;
+    color: white;
+}
+.mySpacingContainerPers{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}

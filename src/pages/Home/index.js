@@ -1,52 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./styles.css"
-import api from "../../service/api"
+
 import {Link} from "react-router-dom"
 
-class Home extends Component {
-  state = {
-    nome:"jonathan",
-    email:"",
-    cargo:"",
-    loading : false,
-  }
-  handleChange = ({target}) => {
-
-    this.setState ({[target.name] : target.value})
-}
-
-saveUser = async () => {
-  const {nome, cargo, email} = this.state
-  this.setState ({loading:true})
-
-  try{
-
-      const response = await api.post ("/home" , {nome,cargo,email})
-      console.log (response.data)
-      this.setState ({loading:false})
-
-      return this.props.history.push(`/persona/${response.data.user._id}`)
-
-  }catch (err){
-      if (err.status === 401) {
-        if (err.data.user) {
-           return this.props.history.push(`/persona/${err.data.user._id}`)
-        }
-      }
-      this.setState ({loading:false})
-  }
-}
-
-
-  render () {   
+function Home() {
    return (
     <div className="home">
       <div className ="jumbotron mb-0"> 
        <div className ="miniContainer ml-4">        
-        <h1 className ="display-3">Automação de Marketing</h1>    
-        <h2 className = "h3"> Saiba como aplicar a Automação de Marketing usando as soluções da Resultados Exponenciais </h2>
+        <h1 className ="display-3">Resultados Exponenciais</h1>    
+        <h2 className = "h3"> Saiba como aplicar a Automação de Marketing usando as soluções da <strong>Resultados Exponenciais</strong> </h2>
         <div className ="teste">
-        <button type="button" className="btn btn-danger btn-lg">Inscreva-se Grátis»</button>
+        <Link to ="user" className="btn btn-danger btn-lg">Inscreva-se Grátis »       
+            </Link>
         </div>
         </div> 
 
@@ -59,7 +25,7 @@ saveUser = async () => {
             </h2>
             <p>Automação de Marketing é o uso de tecnologia para automatizar ações e processos de marketing, reduzir trabalhos manuais e aumentar a eficiência das ações.
             </p>
-            <button className ="btn btn-secondary">Ver detalhes »</button>
+            <Link to = "http://resultadosdigitais.com.br/especiais/automacao-de-marketing/" className ="btn btn-secondary">Ver detalhes »</Link>
             </div>
             <div className="col-md-4 border-right border-dark">            
             <h2>Por que usar Automação de Marketing
@@ -82,35 +48,10 @@ saveUser = async () => {
             <div className ="teste2">
             <div className ="card-header text-center text-white h4">Quero receber o material</div>
             </div>
-            <form className ="myForm">
-           <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Nome</label>
-             <input
-             name = "nome"
-             onChange={this.handleChange} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Joaquim Teixeira"></input>
-            <small id="emailHelp" className="form-text text-muted">Insira seu nome</small>
-           </div>
-           <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Email</label>
-                <input
-                 name ="email"
-                 onChange ={this.handleChange}
-                 type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></input>
-            <small id="emailHelp" className="form-text text-muted">Insira seu e-mail</small>
-           </div> 
-           <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Cargo</label>
-             <input
-             name = "cargo"
-             onChange={this.handleChange} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Joaquim Teixeira"></input>
-            </div>
-           <div className ="d-flex justify-content-center">
-           <Link to ="User" type="submit" className="btn btn-danger btn-lg" onClick={this.saveUser}>
-                {this.state.loading? (<div class="spinner-border" role="status">
-             </div>) : "Cadastre-se"}        
-             </Link>
-           </div>
-           </form>
+            <div className ="d-flex justify-content-center">
+            <Link to ="user" className="btn btn-danger btn-lg">Cadastre-se Grátis»       
+            </Link>
+          </div>
           </div>
         </div>
         </div>
@@ -178,7 +119,6 @@ saveUser = async () => {
         
    );
   }
-} 
 export default Home;
 
 

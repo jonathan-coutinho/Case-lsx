@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import "./styles.css"
 import {Link} from "react-router-dom"
 import api from "../../service/api"
+import FirstForm from "../../components/firstform"
+import SecondForm from "../../components/Secondform.js"
+import ThirdForm from "../../components/Thirdform.js"
+import FourthForm from "../../components/Fourthform.js"
+import PersonasList from '../../components/PersonasList.js'
 
 class Persona extends Component {
 
@@ -39,7 +44,8 @@ class Persona extends Component {
     }
 
     savePersona = async () => {
-        const {        owner,
+        const {      
+        owner,
         name,
         sex,
         age,
@@ -113,17 +119,19 @@ class Persona extends Component {
 
     render() {
         return (
-            <div className="myContainer">
+            <div className="maisum">
+            <div className="myContainerP">
               <h2 className="header">Gerador de Persona</h2>
               {this.renderForms()} 
  
 
-            <footer className="mySpacingContainer">
+            <footer className="mySpacingContainerPers">
             <button onClick={() => (this.changeForms(-1))} type="submit" className="btn btn-primary btn-lg">Voltar</button>
 
             <button onClick={() => (this.changeForms(1))} type="submit" className="btn btn-primary btn-lg">{this.state.renderForm ===5? "Salvar" : "Avançar"}</button>
        
             </footer>
+            </div>
             </div>
           );
     }
