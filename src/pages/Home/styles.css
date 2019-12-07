@@ -1,15 +1,5 @@
-.myContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 5%;
-}
 .myForm {
-    width: 25%;
-    margin-bottom: 10px;
-    border: solid 3px salmon;
-    padding: 10px;
-    background-color: rosybrown;
-
+    width: 100%;
 }
 .chamada {
     text-align: left;
@@ -17,12 +7,65 @@
 }
 .myList {
     width: 40%;
-    margin-left: 75px;
-}
-.home {
-    background-color: slateblue;
+    margin-left: 60px;
 }
 .list-group-item{
     border: 0px;
     background-color: slateblue;
+}
+.miniContainer {
+    display: flex;
+    flex-direction: column;
+}
+.img1 {
+    height: 350px;
+}
+.jumbotron {
+    display: flex;
+    flex-direction: row;
+}
+.container2 {
+    background-color: #0c0d33;
+    color: white;
+}
+.img2 {
+    margin: 20px;
+    width: 700px;
+}
+.color {
+    background-color: #0c0d33;
+}
+.card{
+    background-color: #0c0d33;
+    width: 40%;
+    margin-left: 50px;
+}
+.card2{
+    border: solid 1px black;
+    width: 30%;
+    margin-left: 55px;
+    background-color: white;
+}
+.card3 {
+    margin-left: 50px;
+    border: solid 1px black;
+    width: 30%;
+    background-color: white;
+}
+.card4 {
+    margin-left: 50px;
+    border: solid 1px black;
+    width: 30%;
+    background-color: white;
+}
+.card-deck {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    background-color: #0c0d33;
+    margin-right: 0px;
+}
+.home{
+    background-color: #0c0d33;
 }
